@@ -296,11 +296,11 @@ span {
 .heading {
     font-size: 8rem;
     text-align: center;
-    margin: 5rem 0;
+    margin: 1rem 0;
 }
 
 .education {
-    padding: 100px 15px;
+    padding: 15px 15px;
     background: var(--second-bg-color);
 }
 
@@ -322,6 +322,8 @@ span {
     width: 5px;
     height: 100%;
     position: relative;
+    background-color: var(--color-azulClaro);
+    left: calc(50% - 1px);
 }
 
 .timeline-item {
@@ -334,7 +336,7 @@ span {
     margin-bottom: 0;
 }
 
-.timeline-item:last-child(odd) {
+.timeline-item:nth-child(odd) {
     padding-right: calc(50% + 30px);
     text-align: right;
 }
@@ -343,29 +345,35 @@ span {
     padding-left: calc(50% + 30px);
 }
 
+/* BOLINHAS DA SEÇÃO EDUCAÇÃO */
 .timeline-dot {
     height: 21px;
     width: 21px;
     background-color: var(--color-azulClaro);
-    box-shadow: 0 0 15px var(--color-azulClaro), 0 0 25px var(--color-azulClaro);
+    box-shadow: 0 0 25px var(--color-azulClaro), 0 0 50px var(--color-azulClaro);
     position: absolute;
     left: calc(50% - 8px);
     border-radius: 50%;
     top: 10px;
 }
+/* FIM */
 
+/* DATA DA SEÇÃO EDUCAÇÃO */
 .timeline-date {
     font-size: 20px;
     font-weight: 700;
     color: white;
     margin: 6px 0 15px;
 }
+/* FIM */
 
 .timeline-content {
     background-color: var(--bg-color);
     border: 3px solid var(--color-azulClaro);
     padding: 30px 50px;
     border-radius: 4rem;
+    box-shadow: 0 0 10px var(--color-azulClaro);
+    cursor: pointer;
     transition: 0.3s ease-in-out;
 }
 
@@ -373,3 +381,32 @@ span {
     transform: scale(1.05);
     box-shadow: 0 0 15px var(--color-azulClaro);
 }
+
+.timeline-content h3 {
+    font-size: 20px;
+    color: white;
+    margin: 0 0 10px;
+    font-weight: 500;
+}
+
+.timeline-content p {
+    color: white;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
+}
+
+/* O NEGÓCIO DE ROLAR A PÁGINA PRA FICAR MAIS FINO E COM A COR AZUL */
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--color-azulClaro);
+}
+
+::-webkit-scrollbar-track{
+    background-color: var(--bg-color);
+    width: 50px;
+}
+/* FIM */
