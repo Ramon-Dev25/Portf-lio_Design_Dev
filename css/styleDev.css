@@ -74,8 +74,7 @@ body{
 }
 
 
-.navbar a:hover,
-.navbar a.active {
+.navbar a:hover {
     color: var(--color-azulClaro);
     text-decoration: none;
 }
@@ -88,7 +87,7 @@ body{
 
 section {
     min-height: 100vh;
-    padding: 10rem 12% 10rem;
+    padding: 10rem 12% 5rem;
 }
 
 .home {
@@ -135,10 +134,10 @@ span {
 
 .home-img img{
     position: relative;
-    top: 3rem;
+    top: 2rem;
     width: 32vw;
     border-radius: 50%;
-    box-shadow: 0 0 25px var(--color-azulClaro), 0 0 50px var(--color-azulClaro), 0 0 100px var(--color-azulClaro);
+    box-shadow: 0 0 40px var(--color-azulClaro);
     transition: 0.4s ease-in-out;
 }
 
@@ -187,25 +186,6 @@ span {
 .btn:hover {
     transform: scale(1.05);
     box-shadow: 0 0 15px var(--color-azulClaro);
-}
-
-.btn-group {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-}
-
-.btn-group a:nth-of-type(2) {
-    background-color: black;
-    color: var(--color-azulClaro);
-    border: 2px solid var(--color-azulClaro);
-    box-shadow: 0 0 15px transparent;
-}
-
-.btn-group a:nth-of-type(2):hover {
-    box-shadow: 0 0 15px var(--color-azulClaro);
-    background-color: var(--color-azulClaro);
-    color: black;
 }
 
 .text-animation{
@@ -293,6 +273,7 @@ span {
     }
 }
 
+/* TÍTULO DAS SEÇÕES */
 .heading {
     font-size: 8rem;
     text-align: center;
@@ -300,7 +281,7 @@ span {
 }
 
 .education {
-    padding: 15px 15px;
+    padding: 10rem 20rem;
     background: var(--second-bg-color);
 }
 
@@ -321,7 +302,6 @@ span {
     position: absolute;
     width: 5px;
     height: 100%;
-    position: relative;
     background-color: var(--color-azulClaro);
     left: calc(50% - 1px);
 }
@@ -350,7 +330,6 @@ span {
     height: 21px;
     width: 21px;
     background-color: var(--color-azulClaro);
-    box-shadow: 0 0 25px var(--color-azulClaro), 0 0 50px var(--color-azulClaro);
     position: absolute;
     left: calc(50% - 8px);
     border-radius: 50%;
@@ -372,8 +351,6 @@ span {
     border: 3px solid var(--color-azulClaro);
     padding: 30px 50px;
     border-radius: 4rem;
-    box-shadow: 0 0 10px var(--color-azulClaro);
-    cursor: pointer;
     transition: 0.3s ease-in-out;
 }
 
@@ -410,3 +387,260 @@ span {
     width: 50px;
 }
 /* FIM */
+
+
+/* SEÇÃO DE PROJETOS (SERVICES) */
+
+/* BG DA SEÇÃO */
+.services {
+    background: var(--bg-color);
+}
+
+.services-box {
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.services .heading {
+    margin-bottom: 3rem;
+}
+
+.services-box img {
+    width: 15rem;
+    border-radius: 50%;
+    border: 3px solid var(--color-azulClaro);
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 3rem;
+}
+
+.services-item {
+    min-height: 250px;
+    max-width: 300px;
+    background: rgba(0, 0, 0, 0.7);
+    border: 3px solid rgba(238, 238, 238, 0.2);
+    border-radius: 2rem;
+    margin: 0 2rem;
+    padding: 30px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1.5rem;
+    color: white;
+    transition: 0.5s ease-in-out;
+}
+
+/* DEIXA EM ESCALA DE CINZA QUANDO SE PASSA O MOUSE */
+.wrapper:hover .services-item:not(:hover) {
+    filter: grayscale(1) blur(5px);
+}
+
+.services-item:hover {
+    border: 3px solid var(--color-azulClaro);
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 0 30px var(--color-azulClaro);
+}
+
+.services-item h2 {
+    font-size: 2.8rem;
+}
+
+.services-item p {
+    font-size: 1.5rem;
+}
+
+.contact {
+    background-color: var(--second-bg-color);
+}
+
+.contact h2 {
+    margin-bottom: 3rem;
+    color: white;
+}
+
+.contact form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin: 5rem auto;
+    text-align: center;
+}
+
+.contact form .input-box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+    /* ISSO EU TIREI DO CHATGPT PRA ESCONDER OS BOTÕES */
+/* Remove os botões de incremento e decremento no Chrome, Safari e Edge */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.contact form .input-box input, 
+.contact form textarea {
+    width: 100%;
+    padding: 2.5rem;
+    font-size: 1.8rem;
+    color: var(--text-color);
+    background: var(--bg-color);
+    border-radius: 2rem;
+    border: 2px solid var(--color-azulClaro);
+    margin: -0.5rem 0;
+    resize: none;
+}
+
+.contact form .btn {
+    margin-top: -0.8rem;
+}
+
+.contact p {
+    padding: 0 20rem 0 20rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+
+.contact .social {
+    text-align: center;
+    color: var(--color-azulClaro);
+}
+
+.contact .social a {
+    font-size: 3rem;
+    color: var(--color-azulClaro);
+    border: 2px solid var(--color-azulClaro);
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin-top: 35px;
+    margin-left: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.contact .social a:hover {
+    transform: scale(1.2) translateY(-10px);
+    background-color: var(--color-azulClaro);
+    color: black;
+    box-shadow: 0 0 25px var(--color-azulClaro);
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 10px 10px 10px;
+    background-color: var(--bg-color);
+}
+
+
+.footer .copyright {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+}
+
+/* BOTÃO DE TROCA ENTRE AS PÁGINAS DE DEV E DESIGNER */
+/* DEV */
+.shift-button-dev {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color:var(--bg-color) ;
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 0px 4px var(--color-azulClaro);
+    transition-duration: 0.3s;
+    overflow: hidden;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .shift-button-dev:hover {
+    width: 140px;
+    border-radius: 50px;
+    transition-duration: 0.3s;
+    background-color: var(--color-azulClaro);
+    align-items: center;
+  }
+  
+  
+  .shift-button-dev::before {
+    position: absolute;
+    bottom: -20px;
+    content: "Ramon Dev";
+    color: black;
+    font-size: 0px;
+  }
+  
+  .shift-button-dev:hover::before {
+    font-size: 15px;
+    opacity: 1;
+    bottom: unset;
+    transition-duration: 0.3s;
+  }
+
+/* DESIGNER */
+.shift-button-desig {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color:var(--bg-color) ;
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 0px 4px var(--color-azulClaro);
+    transition-duration: 0.3s;
+    overflow: hidden;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .shift-button-desig:hover {
+    width: 140px;
+    border-radius: 50px;
+    transition-duration: 0.3s;
+    background-color: var(--color-azulClaro);
+    align-items: center;
+  }
+  
+  
+  .shift-button-desig::before {
+    position: absolute;
+    bottom: -20px;
+    content: "Ramon Designer";
+    color: black;
+    font-size: 0px;
+  }
+  
+  .shift-button-desig:hover::before {
+    font-size: 15px;
+    opacity: 1;
+    bottom: unset;
+    transition-duration: 0.3s;
+  }
+  
